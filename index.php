@@ -5,9 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content ="IE=Edge">
 
-		<!-- animate css -->
-	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-
 	<title> To-Do List </title>
 	<!-- external css -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -70,7 +67,7 @@
 
 			<?php
 
-			require_once '../controllers/connect.php';
+			require_once 'controllers/connect.php';
 
 			$sql = "SELECT * FROM tasks";
 			$result = mysqli_query($conn, $sql);
