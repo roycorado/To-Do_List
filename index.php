@@ -53,7 +53,7 @@
 
 					$.ajax({
 						method : 'GET',
-						url : 'controllers/add_task.php',
+						url : './controllers/add_task.php',
 						data: {name : newTask},
 					}).done(
 					console.log('added task')
@@ -67,7 +67,7 @@
 
 			<?php
 
-			require_once 'controllers/connect.php';
+			require_once './controllers/connect.php';
 
 			$sql = "SELECT * FROM tasks";
 			$result = mysqli_query($conn, $sql);
@@ -89,7 +89,7 @@
 					// console.log(task_id);
 					$.ajax({
 						method : 'Post',
-						url : 'controllers/remove_task.php',
+						url : './controllers/remove_task.php',
 						data : {task_id : task_id}
 					}).done(data => {
 						$(this).parent().fadeOut();
